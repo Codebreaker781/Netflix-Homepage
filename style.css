@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url(netflix-sans-font-1749635061-0/NetflixSans-Bd.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Netflix';
+    src: url(netflix-sans-font-1749635061-0/NetflixSans-Rg.ttf) format('truetype');
+}
+/* Netflix Sans - 900
+
+Family
+"Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif
+Style: normal;
+Weight: 900;
+Color: rgb(255, 255, 255);
+Size: 56px;
+Line Height: 70px; */
+/* 960px e 1280px */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Netflix', 'Helvetica Neue', 'Segoe UI', Roboto, Ubuntu, sans-serif;
+    color: white;
+}
+
+body {
+    background: black url(https://assets.nflxext.com/ffe/siteui/vlv3/7d2359a4-434f-4efa-9ff3-e9d38a8bde7f/web/BR-pt-20250707-TRIFECTA-perspective_16d46266-d795-42c1-90f7-4af952aece6a_large.jpg) no-repeat fixed center / cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+body::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+
+/* div.conteiner {
+    display: grid;
+    grid-template-columns: 200px 200px;
+} */
+
+header {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.925), transparent);
+    height: 100px;
+}
+
+div#conteiner {
+    display: flex;
+    padding: 0px 32px 0px 24px;
+    justify-content: space-between;
+}
+
+#logo {
+    height: auto;
+    width: 108px;
+    padding-top: 30px;
+}
+
+div.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 250px;
+    padding-top: 26px;
+}
+
+div#a1 {
+    display: flex;
+    align-items: center;
+    background-color: #131313;
+    text-decoration: none;
+    width: 146px;
+    height: 32px;
+    border: 1.5px solid #606060;
+    border-radius: 4px;
+    text-align: center;
+}
+
+div#a2 > a {
+    font-family: 'Netflix Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Ubuntu, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    background-color: #E50914;
+    padding: 5px 12px;
+    margin-left: 12px;
+    border: 1.5px solid #E50914;
+    border-radius: 4px;
+}
+
+div#a2 > a:hover, div#a3 > a p:hover {
+    background-color:#C11119;
+    border: 1.5px solid #C11119;
+}
+/* nav.topo {
+    margin: -34px 0px 0px 70vw;
+    height: auto;
+    width: 100px;
+    border: 1px rgb(255, 255, 255) solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+nav.topo > a  {
+    color: white;
+    text-decoration: none;
+} */
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 80px;
+}
+
+div.main {
+    width: 432px;
+    height: auto;
+    margin: 0px;
+    text-align: center;
+}
+
+.space {
+    padding-bottom: 16px;
+}
+
+div.login {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input_box {
+    background-color: #131313bd;
+    width: 263px;
+    height: 54px;
+    border: 1.5px solid #606060;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+div#a3 > a {
+    text-decoration: none;
+}
+
+div#a3 > a p {
+    font-family: 'Netflix Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Ubuntu, sans-serif;
+    text-align: center;
+    justify-content: center;
+    background-color: #E50914;
+    padding: 16px 44px;
+    margin-left: 8px;
+    border: 1.5px solid #E50914;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 680px) {
+    #logo {margin-right: 10vh;}
+    div#a1 {
+        width: 40%;
+    }
+    div#a1 > div > p {
+        font-size: 0px;
+    }
+    main {padding-top: 130px;}
+    div.main {
+        width: 400px;
+    }
+    div.main > p {
+        width: 380px;
+    }
+    .input_box {
+        width: 330px;
+        height: 40px;}
+    div#a3 > a p {
+        padding: 10px 30px
+    }
+}
